@@ -9,5 +9,4 @@ RUN apt update && \
 
 WORKDIR /MYNT-EYE-D-SDK
 
-RUN sed -i 's/catkin_make/catkin_make_isolated/g' Makefile && \
-    bash -c '. /opt/ros/melodic/setup.bash && make init && make all'
+RUN bash -c '. /opt/ros/melodic/setup.bash && make init && make all'
