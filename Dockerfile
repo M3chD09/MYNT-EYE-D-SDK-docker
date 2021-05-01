@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update && \
     apt install -y libopencv-dev sudo build-essential curl cmake git make libv4l-dev libjpeg-dev libgtk-3-dev libusb-dev && \
-    apt clean && \
+    rm -rf /var/lib/apt/lists/* && \
     git clone https://github.com/slightech/MYNT-EYE-D-SDK.git
 
 WORKDIR /MYNT-EYE-D-SDK
